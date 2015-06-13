@@ -21,7 +21,9 @@ Code: 404
 No body.
 
 
-### 2. (If user does not exist create it) To create a fresh user pass in the facebook_id, the facebook avatar link and a boolean flag whether or not this user is to be created as registered.
+### 2. If user does not exist create it 
+
+To create a fresh user pass in the facebook_id, the facebook avatar link and a boolean flag whether or not this user is to be created as registered.
 
 ```curl -X POST http://localhost:3000/users --header "Content-Type: application/json" --header "Accept: application/json" -d '{"facebook_id": "123", "facebook_avatar":"foo", "registered":"false"}'```
 
@@ -54,6 +56,8 @@ curl -X POST http://localhost:3000/users/<user_id>/friends/<friend_id> --header 
 
 ```json
 [{"id":2,"facebook_id":"123","facebook_avatar":"foo","registered":null,"created_at":"2015-06-13T07:55:57.039Z","updated_at":"2015-06-13T07:55:57.039Z"},{"id":2,"facebook_id":"123","facebook_avatar":"foo","registered":null,"created_at":"2015-06-13T07:55:57.039Z","updated_at":"2015-06-13T07:55:57.039Z"}]```
+
+### CREATE A RATING
 
 
 
