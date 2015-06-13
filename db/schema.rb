@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20150613100010) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "surname"
     t.string   "facebook_id"
     t.string   "facebook_avatar"
     t.boolean  "registered"
