@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  resources :events
+  root to: "users#index"
+
+  post 'users/:id/friends/:friend_id' => 'users#add_friend'
+  get  'users/:id/friends' => 'users#list_friends'
+
+  resources :friendships
+  resources :jsons
+  resources :tickets
+  resources :ratings
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

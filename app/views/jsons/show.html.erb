@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @json.type %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @json.data %>
+</p>
+
+<%= link_to 'Edit', edit_json_path(@json) %> |
+<%= link_to 'Back', jsons_path %>
